@@ -12,7 +12,11 @@
 - [Conditions: If, else-if, else](#ifelse-ifelse)
 - [Odd Even](#odd-even)
 - [Switch statement](#switch-statement)
-- [Topic](#table-of-contents)
+- [Multiple case in switch statement](#multiple-case-in-switch-statement)
+- [For Loop Only One Loop in Golang](#for-loop)
+- [Break and continue statement](#break-and-continue-statement)
+- [Structure](#structure)
+- [Array](#array)
 ## Init mod file:
 
 ```
@@ -38,7 +42,7 @@ func main() {
 ```
 go run filename
 ```
-
+- [Topic](#table-of-contents)
 ## Escape sequence and comment
 
 
@@ -88,7 +92,7 @@ func main() {
 }
 ```
 
-
+- [Topic](#table-of-contents)
 ## Variable
 - Convention and rule is same as others.
 
@@ -110,7 +114,7 @@ func main() {
 }
 
 ```
-
+- [Topic](#table-of-contents)
 ## Formatting output using %:
 
 ```go
@@ -124,7 +128,7 @@ func main() {
 }
 ```
 
-
+- [Topic](#table-of-contents)
 ## Take input:
 
 ```go
@@ -145,7 +149,7 @@ func main() {
 	fmt.Println(type1, type2, type3)
 }
 ```
-
+- [Topic](#table-of-contents)
 ## Integer Formatting & number conversion for decimal to (binary,octal,hexadecimal):
 
 ```go
@@ -163,7 +167,7 @@ func main() {
 }
 
 ```
-
+- [Topic](#table-of-contents)
 ## Arithmatic operation:
 
 ```go
@@ -180,7 +184,7 @@ func main() {
 	// Others operations are same
 }
 ```
-
+- [Topic](#table-of-contents)
 ## If,else if,else
 
 > Syntax is case sensitive for Golang.
@@ -205,7 +209,7 @@ func main() {
 	}
 }
 ```
-
+- [Topic](#table-of-contents)
 ## Odd even
 ```go
 package main
@@ -225,7 +229,7 @@ func main() {
 	}
 }
 ```
-
+- [Topic](#table-of-contents)
 ## Switch statement
 
 ```go
@@ -249,4 +253,147 @@ func main() {
 	default:fmt.Println("Invalid input")
 	}
 }
+```
+- [Topic](#table-of-contents)
+## Multiple case in switch statement
+
+```go
+package main
+
+import ("fmt")
+
+func main() {
+	var num1 int
+	fmt.Print("Enter a number:")
+	fmt.Scan(&num1)
+
+	switch num1{
+	case 6,7:fmt.Println("Weekend")
+	case 1,2,3,4,5:fmt.Println("Working day")
+	default:fmt.Println("Invalid input")
+	}
+}
+```
+- [Topic](#table-of-contents)
+## For loop
+
+> Only one loop in golang
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var num1 int
+	fmt.Print("Enter a number:")
+	fmt.Scan(&num1)
+
+	// syntax
+	for i := 0; i < num1; i++ {
+		fmt.Println(i)
+	}
+
+	for i := num1; i > 0; i -= 2 {
+		fmt.Println(i)
+	}
+
+    x:=10
+
+    for x>=0{
+        fmt.Println(x)
+		x--
+    }
+}
+```
+
+- [Topic](#table-of-contents)
+## Break and continue statement
+
+```go
+package main 
+
+import "fmt"
+
+func main(){
+	for i:=10;;i+=3{
+		if(i%2 ==0){
+			fmt.Println("Even")
+			continue
+		}else if(i>101){
+			break
+		}
+	}
+}
+```
+- [Topic](#table-of-contents)
+## Function
+
+```go
+package main 
+
+import "fmt"
+
+
+// return type function 
+func add(x int,y int)int{  
+	return x+y;
+}
+
+// no return type function
+func sum(x int,y int){  
+	fmt.Println(x+y)
+}
+
+func main(){
+	fmt.Println(add(10,15))
+	sum(10,15)
+}
+```
+- [Topic](#table-of-contents)
+## Structure
+
+```go
+package main
+
+import "fmt"
+
+type Student struct {
+	name string
+	age  int
+}
+
+func main() {
+	std1 := Student{"A", 32}
+	var std2 Student
+	std2.name = "B"
+	std2.age = 20
+	fmt.Println(std1, "\n", std2)
+}
+```
+- [Topic](#table-of-contents)
+## Array
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var array1 [50]int
+	for i := 1; i < 50; i++ {
+		array1[i] = i
+	}
+
+	fmt.Println(array1)
+}
+
+```
+
+- [Topic](#table-of-contents)
+## Dynamic array | slice:
+
+```go
 ```
