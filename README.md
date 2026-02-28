@@ -417,5 +417,7 @@ sudo snap install go
 sudo apt install protobuf-compiler
 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
-protoc --plugin=protoc-gen-go=$HOME/go/bin/protoc-gen-go        --plugin=protoc-gen-go-grpc=$HOME/go/bin/protoc-gen-go-grpc        --go_out=. --go-grpc_out=. Proto/greet.proto
+```
+```bash
+protoc --plugin=protoc-gen-go=$HOME/go/bin/protoc-gen-go --plugin=protoc-gen-go-grpc=$HOME/go/bin/protoc-gen-go-grpc  --go_out=. --go-grpc_out=. Proto/greet.proto
 ```
